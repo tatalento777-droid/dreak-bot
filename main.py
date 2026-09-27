@@ -229,7 +229,9 @@ async def crearcontador(ctx):
     except Exception as e:
         await ctx.send(f"❌ Ocurrió un error al crear el contador: {e}")
 
-# Reemplaza con el Token de tu panel de Discord
-TOKEN = "MTU1Mzc4NDQzNTAyMTg0MDQwNg.Gos_Gl.SrOIDDcILtskwbL81509GJRH3J8JvT0nX_yySA"
+import os
+
+# Lee el token desde las variables de entorno
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 bot.run(TOKEN)
